@@ -1,0 +1,153 @@
+I have the following to report regarding the flv files within Rachel.
+
+There are 47 of them in the /var/www/modules/math_expression/media-files/
+and each of these has an equivalent, but much smaller in size, entry in
+the _vti_cnf subdirectory.  I've no idea as to the purpose of this.
+
+The large files all converted successfully, the small ones all failed
+with the following type of error report:
+[flv @ 0x89e6e00] Format detected only with low score of 25,
+misdetection possible!
+[flv @ 0x89e6e00] Could not find codec parameters (Video: [0][0][0][0] /
+0x0000)
+[flv @ 0x89e6e00] Could not find codec parameters (Audio: [0][0][0][0] /
+0x0000, 0 channels)
+[flv @ 0x89e6e00] Estimating duration from bitrate, this may be
+inaccurate
+/media/alex/_AKVar/Flvs/_vti_cnf/L19-Slope-Intercept-Form.flv: could not
+find codec parameters
+
+I've tried playing the odd converted (to webm format) one and it plays
+fine on my laptop but I haven't had a chance to play it on an XO-1.
+(I'll attach one for someone else to try and perhaps report back.)
+
+Here is a listing of the flv SOURCE material in the 'current'
+rachelpi_32EN_3.2.0.img:
+
+listing of /mnt/stick/var/www/modules/math_expression/media-files/
+total 137588
+-rw-rw-r-- 1 500 users  748528 Sep 17  2013 101-coordinate-plane.flv
+-rw-rw-r-- 1 500 users 1871677 Sep 17  2013 102-coordinate-of-a-point.flv
+-rw-rw-r-- 1 500 users 3538901 Sep 17  2013 103-graphing-linear-equation.flv
+-rw-rw-r-- 1 500 users 2266527 Sep 17  2013 104_1-change-in-x-and-y.flv
+-rw-rw-r-- 1 500 users 2196750 Sep 17  2013 104_2-Slope-of-a-line.flv
+-rw-rw-r-- 1 500 users 3841158 Sep 17  2013 105-slope formula.flv
+-rw-rw-r-- 1 500 users 5673872 Sep 17  2013 108-X-and-Y-Intercepts.flv
+-rw-rw-r-- 1 500 users 4540192 Sep 17  2013 L16-Positive-and-negative-Slope.flv
+-rw-rw-r-- 1 500 users 4026863 Sep 17  2013 L191-Slope-Intercept-Examples.flv
+-rw-rw-r-- 1 500 users 4147948 Sep 17  2013 L192-Determine-Eqn-Line.flv
+-rw-rw-r-- 1 500 users 4293876 Sep 17  2013 L193-Equation-of-a-Line-Parallel.flv
+-rw-rw-r-- 1 500 users 2749567 Sep 17  2013 L19-Slope-Intercept-Form.flv
+-rw-rw-r-- 1 500 users  830010 Sep 17  2013 L201-Intro to algebra.flv
+-rw-rw-r-- 1 500 users 2566736 Sep 17  2013 L202 Combining Like Terms.flv
+-rw-rw-r-- 1 500 users 1916644 Sep 17  2013 L203 Simplifying-Adding like terms.flv
+-rw-rw-r-- 1 500 users 2578959 Sep 17  2013 L204-Simplifying-removing brackets.flv
+-rw-rw-r-- 1 500 users 7341151 Sep 17  2013 L208-Solving_Linear_Equations_Part_2.flv
+-rw-rw-r-- 1 500 users 1910833 Sep 17  2013 L24 Evaluating Expressions.flv
+-rw-rw-r-- 1 500 users 5522209 Sep 17  2013 L27 Solving Linear equation 1.flv
+-rw-rw-r-- 1 500 users 4056090 Sep 17  2013 L301-Exponent-Laws.flv
+-rw-rw-r-- 1 500 users 4401762 Sep 17  2013 L302-exponent-law-part-2.flv
+-rw-rw-r-- 1 500 users 3681187 Sep 17  2013 L303 Exponent Examples.flv
+-rw-rw-r-- 1 500 users 3826741 Sep 17  2013 L304-Fractional-Exponents.flv
+-rw-rw-r-- 1 500 users 1857376 Sep 17  2013 L401-2D-Rotational-Symmetry.flv
+-rw-rw-r-- 1 500 users 3317417 Sep 17  2013 L402-Line-Symmetry.flv
+-rw-rw-r-- 1 500 users 5971560 Sep 17  2013 L403_1 Rotational-Symmetry-Cube.flv
+-rw-rw-r-- 1 500 users 3841420 Sep 17  2013 L403_2 Rotational-Symmetry-Tetrahedron.flv
+-rw-rw-r-- 1 500 users 1786273 Sep 17  2013 L501-Understanding-Fractions.flv
+-rw-rw-r-- 1 500 users 1856647 Sep 17  2013 L502-Improper-and-Mixed-Fractions.flv
+-rw-rw-r-- 1 500 users 2381288 Sep 17  2013 L503-Equivalent-Fractions.flv
+-rw-rw-r-- 1 500 users 3415802 Sep 17  2013 L504-Adding-Fractions.flv
+-rw-rw-r-- 1 500 users 3482506 Sep 17  2013 L505-How-To-Add-Fractions.flv
+-rw-rw-r-- 1 500 users 3330438 Sep 17  2013 L506-Subtracting-Fractions.flv
+-rw-rw-r-- 1 500 users 2537870 Sep 17  2013 L507-Multiplying-Fractions.flv
+-rw-rw-r-- 1 500 users 2343937 Sep 17  2013 L508-How-To-Multiply-Fractions.flv
+-rw-rw-r-- 1 500 users 1702558 Sep 17  2013 L509-Dividing-Fractions.flv
+-rw-rw-r-- 1 500 users 2603159 Sep 17  2013 L510-Dividing-Fractions-Examples.flv
+-rw-rw-r-- 1 500 users 1905897 Sep 17  2013 L601 How-to-Find-the-Volume.flv
+-rw-rw-r-- 1 500 users 1765713 Sep 17  2013 L602-Volume-of-a-cube.flv
+-rw-rw-r-- 1 500 users 2495435 Sep 17  2013 L603-Volume-of-a-cylinder.flv
+-rw-rw-r-- 1 500 users 3141653 Sep 17  2013 L605-Volume-of-a-cone.flv
+-rw-rw-r-- 1 500 users 2499258 Sep 17  2013 L605-volume-of-a-sphere.flv
+-rw-rw-r-- 1 500 users 2478255 Sep 17  2013 L606_Volume_of_a_pyramid.flv
+-rw-rw-r-- 1 500 users 1669425 Sep 17  2013 L701-Area-of-a-Square.flv
+-rw-rw-r-- 1 500 users 1747904 Sep 17  2013 L702-Area-of-a-Rectangle.flv
+-rw-rw-r-- 1 500 users 2021310 Sep 17  2013 L703-Area-of-a-Circle.flv
+-rw-rw-r-- 1 500 users 2089281 Sep 17  2013 L704-Area-of-a-Parallelogram.flv
+-rw-rw-r-- 1 500 users      70 Sep 17  2013 leftback.gif
+-rw-rw-r-- 1 500 users     900 Sep 17  2013 li.gif
+-rw-rw-r-- 1 500 users     307 Sep 17  2013 rightback.gif
+drwxrwxr-x 2 500 users    4096 Jul 23  2014 _vti_cnf
+
+Listing of _vti_cnf..
+
+total 200
+-rw-rw-r-- 1 500 users 316 Sep 17  2013 101-coordinate-plane.flv
+-rw-rw-r-- 1 500 users 199 Sep 17  2013 102-coordinate-of-a-point.flv
+-rw-rw-r-- 1 500 users 196 Sep 17  2013 103-graphing-linear-equation.flv
+-rw-rw-r-- 1 500 users 203 Sep 17  2013 104_1-change-in-x-and-y.flv
+-rw-rw-r-- 1 500 users 135 Sep 17  2013 104_2-Slope-of-a-line.flv
+-rw-rw-r-- 1 500 users 201 Sep 17  2013 105-slope formula.flv
+-rw-rw-r-- 1 500 users 199 Sep 17  2013 108-X-and-Y-Intercepts.flv
+-rw-rw-r-- 1 500 users 202 Sep 17  2013 L16-Positive-and-negative-Slope.flv
+-rw-rw-r-- 1 500 users 273 Sep 17  2013 L191-Slope-Intercept-Examples.flv
+-rw-rw-r-- 1 500 users 206 Sep 17  2013 L192-Determine-Eqn-Line.flv
+-rw-rw-r-- 1 500 users 215 Sep 17  2013 L193-Equation-of-a-Line-Parallel.flv
+-rw-rw-r-- 1 500 users 208 Sep 17  2013 L19-Slope-Intercept-Form.flv
+-rw-rw-r-- 1 500 users 205 Sep 17  2013 L201-Intro to algebra.flv
+-rw-rw-r-- 1 500 users 208 Sep 17  2013 L202 Combining Like Terms.flv
+-rw-rw-r-- 1 500 users 211 Sep 17  2013 L203 Simplifying-Adding like terms.flv
+-rw-rw-r-- 1 500 users 221 Sep 17  2013 L204-Simplifying-removing brackets.flv
+-rw-rw-r-- 1 500 users 212 Sep 17  2013 L208-Solving_Linear_Equations_Part_2.flv
+-rw-rw-r-- 1 500 users 279 Sep 17  2013 L24 Evaluating Expressions.flv
+-rw-rw-r-- 1 500 users 281 Sep 17  2013 L27 Solving Linear equation 1.flv
+-rw-rw-r-- 1 500 users 271 Sep 17  2013 L301-Exponent-Laws.flv
+-rw-rw-r-- 1 500 users 270 Sep 17  2013 L302-exponent-law-part-2.flv
+-rw-rw-r-- 1 500 users 280 Sep 17  2013 L303 Exponent Examples.flv
+-rw-rw-r-- 1 500 users 277 Sep 17  2013 L304-Fractional-Exponents.flv
+-rw-rw-r-- 1 500 users 201 Sep 17  2013 L401-2D-Rotational-Symmetry.flv
+-rw-rw-r-- 1 500 users 207 Sep 17  2013 L402-Line-Symmetry.flv
+-rw-rw-r-- 1 500 users 205 Sep 17  2013 L403_1 Rotational-Symmetry-Cube.flv
+-rw-rw-r-- 1 500 users 205 Sep 17  2013 L403_2 Rotational-Symmetry-Tetrahedron.flv
+-rw-rw-r-- 1 500 users 211 Sep 17  2013 L501-Understanding-Fractions.flv
+-rw-rw-r-- 1 500 users 206 Sep 17  2013 L502-Improper-and-Mixed-Fractions.flv
+-rw-rw-r-- 1 500 users 208 Sep 17  2013 L503-Equivalent-Fractions.flv
+-rw-rw-r-- 1 500 users 274 Sep 17  2013 L504-Adding-Fractions.flv
+-rw-rw-r-- 1 500 users 208 Sep 17  2013 L505-How-To-Add-Fractions.flv
+-rw-rw-r-- 1 500 users 209 Sep 17  2013 L506-Subtracting-Fractions.flv
+-rw-rw-r-- 1 500 users 279 Sep 17  2013 L507-Multiplying-Fractions.flv
+-rw-rw-r-- 1 500 users 213 Sep 17  2013 L508-How-To-Multiply-Fractions.flv
+-rw-rw-r-- 1 500 users 206 Sep 17  2013 L509-Dividing-Fractions.flv
+-rw-rw-r-- 1 500 users 281 Sep 17  2013 L510-Dividing-Fractions-Examples.flv
+-rw-rw-r-- 1 500 users 280 Sep 17  2013 L601 How-to-Find-the-Volume.flv
+-rw-rw-r-- 1 500 users 204 Sep 17  2013 L602-Volume-of-a-cube.flv
+-rw-rw-r-- 1 500 users 208 Sep 17  2013 L603-Volume-of-a-cylinder.flv
+-rw-rw-r-- 1 500 users 204 Sep 17  2013 L605-Volume-of-a-cone.flv
+-rw-rw-r-- 1 500 users 206 Sep 17  2013 L605-volume-of-a-sphere.flv
+-rw-rw-r-- 1 500 users 207 Sep 17  2013 L606_Volume_of_a_pyramid.flv
+-rw-rw-r-- 1 500 users 204 Sep 17  2013 L701-Area-of-a-Square.flv
+-rw-rw-r-- 1 500 users 207 Sep 17  2013 L702-Area-of-a-Rectangle.flv
+-rw-rw-r-- 1 500 users 204 Sep 17  2013 L703-Area-of-a-Circle.flv
+-rw-rw-r-- 1 500 users 211 Sep 17  2013 L704-Area-of-a-Parallelogram.flv
+-rw-rw-r-- 1 500 users 337 Sep 17  2013 leftback.gif
+-rw-rw-r-- 1 500 users 338 Sep 17  2013 li.gif
+-rw-rw-r-- 1 500 users 338 Sep 17  2013 rightback.gif
+
+Running my script against this directory of flv files yieled the
+following results:
+
+Number of html files examined: 0, of which 0 were modified. 
+.mp4 files encountered: 0, of which 0 were converted
+                                     but 0 failed.
+    taking a total time of  
+        Avg time/file: ; time/meg of original format: .
+    Total file space- originals: 0, 
+                    conversions: 0
+    for an over all size increase of: 0, (0.0%.)
+.flv files encountered: 94, of which 47 were converted
+                                     but 47 failed.
+    taking a total time of 1:43:21 
+        Avg time/file: 0:02:11; time/meg of original format: 0:00:44.
+    Total file space- originals: 140,770,563, 
+                    conversions: 163,226,064
+    for an over all size increase of: 22,455,501, (16.0%.)
+
