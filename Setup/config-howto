@@ -1,6 +1,6 @@
 Note: This file comes as part of the Setup directory which, if I
 have provided the SD Card, can be found on the card at
-/root/Setup/config-howto
+/home/pi/Setup/ (and/or possibly at /root/Setup/.)
 It outlines what has been (or needs to be) done to prepare a microSD
 card to turn a Raspberry Pi (B2) into a Rachel server.
 
@@ -9,8 +9,8 @@ card to turn a Raspberry Pi (B2) into a Rachel server.
 A 64 Gigabyte microSD card is required.
 http://www.amazon.com/SanDisk-Memory-Adapter--SDSDQUAN-064G-G4A-Version/dp/B00M55C1I2/ref=sr_1_2?s=pc&ie=UTF8&qid=1431976262&sr=1-2&keywords=64gb+micro+sd
 
-You'll need a 'host' computer (your laptop or desk top- mine runs Linux,
-details might differ if using another OS) and a Raspberry PiB2[1].
+You'll need a (1)'host' computer (your laptop or desk top- mine runs Linux,
+details might differ if using another OS) and a (2)Raspberry PiB2[1].
 
 Use your host computer to download the Raspbian image from
 https://www.raspberrypi.org/downloads/raspbian/
@@ -76,7 +76,7 @@ a server so that it can host a web page and so that it can be run
 "headless."  Be sure the WiFi dongle is plugged in and the Pi is
 still connected to the internet through an Ethernet cable.
 This is done by the create_server.sh script:
-source create_server.sh                 [3]
+source create_server.sh            #     [3]
 
 The only thing now remaining it to move the Rachel content to the
 /var/www/ dirctory tree. I can provide this content (converted from mp4
@@ -89,8 +89,11 @@ Use an XO laptop (or any other wifi enabled computer) to connect to the
 Pi's SSID ('1stPi2') and then point the browse activity (or any browser)
 to 10.10.10.10 to see if it all works
 
-[1] The older Raspberry PiB will also work but will probably not perform as
-well.  One source is here:
+
+Foot Notes:
+
+[1] The older Raspberry PiB will also work and/but may or may not
+perform as well.  One source is here:
 http://www.amazon.com/CanaKit-Raspberry-Complete-Original-Preloaded/dp/B008XVAVAW/ref=sr_1_1?ie=UTF8&qid=1431972409&sr=8-1&keywords=canakit+raspberry+pi+2
 
 [2] Some time during August of 2015, some of the sources changed causing
